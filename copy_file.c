@@ -7,7 +7,12 @@
 #include <unistd.h>
 #include <string.h>
 
-
+/*
+* @pre file_name != NULL, nom du fichier source
+       new_file_name != NULL, nom du fichier destination (la copie)
+* @post copie le contenu de {file_name} vers {new_file_name}
+        retourne 0 si la fonction se termine avec succès, -1 sinon
+*/
 int copy(char *file_name, char *new_file_name){
     int fileSource, fileDest;
     void *src, *dst;
